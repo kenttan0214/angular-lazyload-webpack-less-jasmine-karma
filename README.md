@@ -1,5 +1,5 @@
-# angular2webpack
-AngularJs Based with Webpack Build tools & Angular Lazy Load & Less
+# AngularJS Webpack + LazyLoad + Less
+AngularJs Project Based with Webpack Build tools & Angular Lazy Load & Less
 
 ## Environment Setup
 ### Dependencies
