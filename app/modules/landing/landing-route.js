@@ -12,6 +12,7 @@ app.config(['$stateProvider', function($stateProvider) {
             templateProvider: function($q) {
                 return $q(function(resolve) {
                     require.ensure([], function() {
+                        require('./landing.less');
                         return resolve(require('./landing.html'));
                     });
                 });
