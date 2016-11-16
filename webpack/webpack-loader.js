@@ -11,6 +11,9 @@ module.exports = function(appEnv) {
         exclude: /node_modules/,
         loader: 'style-loader!css-loader'
     }, {
+        test: /\.less$/,
+        loader: 'style!css!less'
+    }, {
         test: /\.(png|jpg|svg)$/,
         exclude: /node_modules/,
         loader: "url?limit=10000"

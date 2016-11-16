@@ -1,9 +1,16 @@
 'use strict';
 
-var app = angular.module('kent.app', ['ngResource', 'ui.router', 'oc.lazyLoad']);
+require('./common');
+require('./modules/landing');
+
+var app = angular.module('kent.app', [
+	'ngResource', 'ui.router', 'oc.lazyLoad', 
+	'kent.common-services',
+	'kent.app.landing'
+]);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/landing/');
 }]);
 
 

@@ -40,7 +40,8 @@ var webpackConfig = {
         modulesDirectories: ['node_modules'],
         extensions: ['', '.js'],
         alias: {
-            components: path.resolve("app/components")
+            components: path.resolve("app/components"),
+            services: path.resolve("app/components/common-services")
         }
     },
     target: 'web'
