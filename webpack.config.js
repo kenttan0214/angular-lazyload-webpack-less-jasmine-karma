@@ -46,7 +46,7 @@ var webpackConfig = {
     target: 'web'
 };
 
-if (appEnv.environment == 'prod') {
+if (appEnv.environment == 'pro') {
     delete webpackConfig ['devtool'];
     delete webpackConfig.output ['publicPath'];
 }
