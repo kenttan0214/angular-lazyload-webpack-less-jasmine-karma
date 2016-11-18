@@ -5,7 +5,7 @@ module.exports = function(appEnv) {
     var loaders = [{
         test: [/\.js?$/],
         exclude: /node_modules/,
-        loader: 'ng-annotate!babel'
+        loader: 'ng-annotate!babel?presets[]=es2015'
     }, {
         test: [/\.css$/],
         exclude: /node_modules/,
