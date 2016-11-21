@@ -32,7 +32,7 @@ module.exports = function(appEnv) {
     }, {
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: "raw-loader"
+        loader: "html-loader"
     }];
 
     if (appEnv.environment == 'pro') {

@@ -11,13 +11,6 @@ module.exports = function(appEnv) {
             root: __dirname + '/../',
             verbose: true
         }),
-        new CopyWebpackPlugin([{
-            from: __dirname + '/../app/assets/imgs',
-            to: __dirname + '/../build/assets/imgs'
-        }, {
-            from: __dirname + '/../app/assets/svg',
-            to: __dirname + '/../build/assets/svg'
-        }]),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname + '/../app/index.html'),
             filename: 'index.html',
@@ -65,12 +58,6 @@ module.exports = function(appEnv) {
             minChunks: Infinity,
             filename: '[name]-[hash][id].js'
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            comments: false
-        }),
         new webpack.DefinePlugin({
             'app': {
                 'environment': JSON.stringify(appEnv)
@@ -78,7 +65,18 @@ module.exports = function(appEnv) {
         })
     ];
 
-    if (appEnv.environment != 'pro') {
+    if (appEnv.environment == 'pro') {
+        plugins.push(new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                angular: true,
+                warnings: false
+            },
+            comments: false,
+            options: {
+                sourceMap: false
+            }
+        }));
+    } else {
         plugins.push(new CssSourcemapPlugin());
     }
     

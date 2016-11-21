@@ -40,6 +40,7 @@ var webpackConfig = {
         modulesDirectories: ['node_modules'],
         extensions: ['', '.js'],
         alias: {
+            assets: path.resolve("app/assets"),
             style: path.join(__dirname, "app/assets/less"),
             components: path.resolve("app/components"),
             services: path.resolve("app/components/common-services")
