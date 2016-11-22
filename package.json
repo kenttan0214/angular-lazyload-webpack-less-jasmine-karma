@@ -1,7 +1,7 @@
 {
   "name": "App",
   "version": "1.0.1",
-  "description": "AngularJs with Webpack Build tools & lazy load",
+  "description": "AngularJs Project Based with Webpack Build tools & Angular ocLazyLoad & Less & Karma + Jasmine Unit Test",
   "main": "index.js",
   "scripts": {
     "start": "npm run app-local",

@@ -1,5 +1,5 @@
-# AngularJS Webpack + LazyLoad + Less
-AngularJs Project Based with Webpack Build tools & Angular Lazy Load & Less
+# AngularJS Webpack + ocLazyLoad + Less + Karma & Jasmine
+AngularJs Project Based with Webpack Build tools & Angular ocLazyLoad & Less & Karma + Jasmine Unit Test
 
 ## Environment Setup
 ### Dependencies
