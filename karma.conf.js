@@ -1,8 +1,10 @@
-var path = require('path');
-var webpackConfig = require('./webpack.config');
-
 // Karma configuration
 module.exports = function(config) {
+    var path = require('path');
+    var webpackConfig = require('./webpack.config')({
+        environment: "local"
+    });
+    
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -23,7 +25,7 @@ module.exports = function(config) {
         webpack: {
             resolve: webpackConfig.resolve,
             module: {
-                loaders: [].concat(webpackConfig.module.loaders)
+                rules: [].concat(webpackConfig.module.rules)
             },
             watch: true
         },
